@@ -1,9 +1,6 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from "../components/Footer.astro";
-import '../styles/global.css';
-
-const pageTitle = "About Me";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Aboot";
 
 const identity = {
   firstName: "Scum",
@@ -19,28 +16,7 @@ const finished = false;
 const goal = 3;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro</title>
-    <title>{pageTitle}</title>
-    <style>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-
-      .skill {
-        color: green;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-
-    <h1>{pageTitle}</h1>
+    <BaseLayout  pageTitle={pageTitle}>
     <h2>I like turtles</h2>
     <h3>and frogs</h3>
     <p>Oregon trail is cool</p>
@@ -75,10 +51,5 @@ const goal = 3;
         <p>My goal is not 3 days.</p>
       )
     }
-    <Footer />
-     <Footer />
- <script>
-   import "../scripts/menu.js";
- </script>
-  </body>
-</html>
+
+  </BaseLayout>
